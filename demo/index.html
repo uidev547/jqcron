@@ -1,6 +1,4 @@
-<?php
-header('Content-Type: text/html; charset=utf-8');
-?>
+
 <!doctype html>
 <html lang="fr">
 	<head>
@@ -67,15 +65,7 @@ header('Content-Type: text/html; charset=utf-8');
 		<div id="container">
 			<h1>jqCron Demos</h1>
 			<ul id="menu">
-				<?php
-				$files = glob(dirname(__FILE__) . '/demo_*.php');
-
-				foreach ( $files as $file ) {
-					$demo = basename($file, '.php');
-					echo '<li><a href="' . $demo . '.php">' . str_replace('_', ' ', $demo) . '</a></li>';
-				}
-				?>
-			</ul>
+				<li><a href="demo_1.html">demo 1</a></li><li><a href="demo_2.html">demo 2</a></li><li><a href="demo_3.html">demo 3</a></li><li><a href="demo_4.html">demo 4</a></li><li><a href="demo_5.html">demo 5</a></li><li><a href="demo_6.html">demo 6</a></li>			</ul>
 			<iframe id="demo"></iframe>
 		</div>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>

@@ -1,0 +1,87 @@
+
+<html>
+    <head>
+        <title>demo_6</title>
+        <link rel="stylesheet" type="text/css" href="reset.css" />
+        <link rel="stylesheet" type="text/css" href="demo.css" />
+        <link rel="stylesheet" type="text/css" href="../src/jqCron.css" />
+    </head>
+    <body>
+        <table>
+            <td><pre>
+$(function(){
+    var cron =
+        $('.example5')
+        .jqCron()
+        .jqCronGetInstance();
+     
+    $('.a5-enable').click(function(e){
+        cron.enable();
+        e.preventDefault();
+    });
+     
+    $('.a5-disable').click(function(e){
+        cron.disable();
+        e.preventDefault();
+    });
+     
+    $('.a5-toggle').click(function(e){
+        if(cron.isDisabled())
+            cron.enable();
+        else
+            cron.disable();
+        e.preventDefault();
+    });
+});
+</pre></td>
+            <td>
+<div class="example5"></div>
+<br/>
+<p><span class="result-span"></span></p>
+
+<p style="margin-top:1em">
+    <a href="#" class="a5-enable">Enable</a> 
+    <a href="#" class="a5-disable">Disable</a> 
+    <a href="#" class="a5-toggle">Toggle</a> 
+</p></td>
+        </table>
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="../src/jqCron.js"></script>
+        <script type="text/javascript" src="../src/jqCron.en.js"></script>
+        <script type="text/javascript">
+            
+$(function(){
+    var cron =
+        $('.example5')
+        .jqCron( { 
+            bind_to: $('.result-span'),
+            bind_method: {
+                set: function($element, value) {
+                    $element.html(value);
+                }
+            }
+        })
+        .jqCronGetInstance();
+     
+    $('.a5-enable').click(function(e){
+        cron.enable();
+        e.preventDefault();
+    });
+     
+    $('.a5-disable').click(function(e){
+        cron.disable();
+        e.preventDefault();
+    });
+     
+    $('.a5-toggle').click(function(e){
+        if(cron.isDisabled())
+            cron.enable();
+        else
+            cron.disable();
+        e.preventDefault();
+    });
+});
+
+        </script>
+    </body>
+</html>

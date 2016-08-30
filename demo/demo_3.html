@@ -1,20 +1,32 @@
+
 <html>
 	<head>
-		<title>__DEMO__</title>
+		<title>demo_3</title>
 		<link rel="stylesheet" type="text/css" href="reset.css" />
 		<link rel="stylesheet" type="text/css" href="demo.css" />
 		<link rel="stylesheet" type="text/css" href="../src/jqCron.css" />
 	</head>
 	<body>
 		<table>
-			<td><pre>__JSPRE__</pre></td>
-			<td>__HTML__</td>
+			<td><pre>
+$(function(){
+    $('.example3').jqCron();
+});
+</pre></td>
+			<td>
+<input class="example3" value="30 16 * * *" />
+<br/>
+<p><span class="result-span"></span></p></td>
 		</table>
 		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="../src/jqCron.js"></script>
 		<script type="text/javascript" src="../src/jqCron.en.js"></script>
 		<script type="text/javascript">
-			__JS__
+			
+$(function(){
+    $('.example3').jqCron();
+});
+
 		</script>
 	</body>
 </html>

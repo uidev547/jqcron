@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>demo_1</title>
+        <link rel="stylesheet" type="text/css" href="reset.css" />
+        <link rel="stylesheet" type="text/css" href="demo.css" />
+        <link rel="stylesheet" type="text/css" href="../src/jqCron.css" />
+    </head>
+    <body>
+        <table>
+            <td><pre>
+$(function(){
+    $('.example1').jqCron();
+});
+</pre></td>
+            <td>
+<div class="example1"></div>
+<br/>
+<p><span class="result-span"></span></p></td>
+        </table>
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="../src/jqCron.js"></script>
+        <script type="text/javascript" src="../src/jqCron.en.js"></script>
+        <script type="text/javascript">
+            
+$(function(){
+    $('.example1').jqCron({
+        bind_to: $('.result-span'),
+        bind_method: {
+            set: function($element, value) {
+                $element.html(value);
+            }
+        }
+    });
+});
+
+        </script>
+    </body>
+</html>

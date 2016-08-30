@@ -1,0 +1,49 @@
+
+<html>
+    <head>
+        <title>demo_5</title>
+        <link rel="stylesheet" type="text/css" href="reset.css" />
+        <link rel="stylesheet" type="text/css" href="demo.css" />
+        <link rel="stylesheet" type="text/css" href="../src/jqCron.css" />
+    </head>
+    <body>
+        <table>
+            <td><pre>
+$(function(){
+    $('.example5-selector').jqCron({
+        default_value: '30 2 1 * *',
+        numeric_zero_pad: true,
+        bind_to: $('.example5-span'),
+        bind_method: {
+            set: function($element, value) {
+                $element.html(value);
+            }
+        }
+    });
+});
+</pre></td>
+            <td>
+<div class="example5-selector"></div>
+<p><span class="example5-span"></span></p></td>
+        </table>
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="../src/jqCron.js"></script>
+        <script type="text/javascript" src="../src/jqCron.en.js"></script>
+        <script type="text/javascript">
+            
+$(function(){
+    $('.example5-selector').jqCron({
+        default_value: '30 2 1 * *',
+        numeric_zero_pad: true,
+        bind_to: $('.example5-span'),
+        bind_method: {
+            set: function($element, value) {
+                $element.html(value);
+            }
+        }
+    });
+});
+
+        </script>
+    </body>
+</html>
